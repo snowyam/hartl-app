@@ -29,5 +29,22 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_select 'a', text: 'delete', count: 0
   end
+
+  # Fixtures database seed reverted. Remigrate-reset db.
+=begin
+  test "index show users only if activated as admin" do
+    log_in_as(@admin)
+    all_users = assigns(:user)
+    all_pages = all_users.paginate(page: total_pages)
+    all_pages.each do |page|
+      get users_path, page: page
+      assert_select 'div.pagination'
+      page_of_users = User.paginate(page: page)
+      page_of_users.each do |user|
+        assert_equal true, user.activated?
+      end
+    end
+  end
+=end
   
 end
