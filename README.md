@@ -22,7 +22,8 @@ Implementation of a Twitter clone through following the [*Ruby on Rails Tutorial
 
 #### 12: Password reset
 
-* TODO
+* Password resets modeled as resource like sessions and account activations
+* Generate password reset emails like account activations
 
 #### 11: Account activation
 
