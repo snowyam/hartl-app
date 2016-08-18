@@ -2,23 +2,35 @@
 
 Implementation of a Twitter clone through following the [*Ruby on Rails Tutorial(Rails 5): Learn Web Development with Rails*](http://www.railstutorial.org/) book by [Michael Hartl](http://www.michaelhartl.com/).
 
+TODO: AWS S3 for images.
+
 ## Features Implemented and Things Learned
 
 * Rails framework
 * MVC and REST architecture
 * TDD, BDD, CI
-* Own authentication and authorization system
+* Homemade login, authentication, and authorization system
 * Databases, generators, migrations, routing
+
+"This application includes examples of all the major features of Rails, including models, views, controllers, templates, partials, filters, validations, callbacks, has_many/belongs_to and has_many :through associations, security, testing, and deployment."
 
 ### Chapters: Detailed Things Learned
 
 #### 14: Following users
 
-* TODO
+* Modeling the follower and following relationships
+* Rails' has_many :through
+* Nested routes
+* Rails allows lower-level raw SQL integrated in
+* The final status feed of followers and self
 
 #### 13: User microposts
 
-* TODO
+* Created the Microposts model
+* Using the has_many and belongs_to methods
+* Default ordering with default_scope
+* Using dependent: :destroy to destroy all associated objects
+* Image upload and resize with CarrierWave
 
 #### 12: Password reset
 
